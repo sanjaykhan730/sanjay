@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="myhed"></h2>
+    <button onclick="foodmenu()"> foodmenu</button>
+    <br>
+    <br>
+    <input type="text" name="" id="fname">
+    <br>
+    <button onclick="adduser()">adduser</button>
+    <br>
+    <br>
+    <button onclick="check27()">check27</button>
+    <br>
+    <br>
+    <button onclick="sayhello()"> sayhello</button>
+    <br>
+    <br>
+    <button onclick="changevalue()">changevalue</button>
+    
+    <button onclick="changetext()">changetext</button>
+    <h2>hello sir</h2>
+    <br>
+    <br>
+    <h1 id="demo"> appaly here</h1>
+    <br>
+    <h4 name="myheading"> myheaing</h4>
+    
+
+    <script>
+        function changetext(){
+            document.querySelector("h2").innerHTML="in this method is called a change content";
+            
+        }
+
+        function changevalue(){
+            document.getElementById("demo").innerHTML="its a changeing method";
+        }
+        function sayhello(){
+            document.getElementsByName("myheading")[0].innerHTML="its a name function"
+
+        }
+    </script>
+    <script>
+        var t20team=[{name:"tamil",age:27,},
+                     {name:"ajith",age:23,},
+                     {name:"settu",age:30,},
+                     {name:"sanjay",age:22,},];
+
+      function check27(){
+        var twintysevan=t20team.filter(function(val){
+            return val.age==27
+
+        });
+        console.log(twintysevan)
+      }               
+    </script>
+    <script>
+        function adduser(){
+            var userinput=document.getElementById("fname").value="in this is input method"
+        }
+    </script>
+    
+    <script>
+        function foodmenu(){
+           document.getElementById("myhed").innerHTML="checken beriyani";
+            
+
+        }
+
+
+    </script>
+</body>
+</html>

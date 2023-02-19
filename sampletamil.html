@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CV using Html & Css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="Restyle.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: ;
+}
+.container{
+    position: relative;
+    width: 100%;
+    margin: 50px;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0,1);
+}
+.container .left_side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.container .right_side{
+    position: relative;
+    background:#fff;
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 30px;
+    cursor: pointer;
+
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 400;
+}
+.intrest{
+    margin-bottom: 20px;
+}
+.intrest ul li i{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    list-style: none;
+   color: #03a9f4;
+}
+.title2{
+    margin-top: 100px;
+    color: wheat;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.intrest ul li {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 30px;
+    position: relative;
+    list-style: none;
+    margin: 15px;
+    cursor: pointer;
+}
+.contactInfo.languag .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background:#081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.languag .percent  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.about .title3{
+    text-transform: uppercase;
+    color: #03a9f4;
+}
+
+.about p{
+    margin: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    font-size:17px;
+}
+.right{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about h3{
+    margin-top: 10px;
+   
+}
+.Education p{
+    font-weight: 500;
+    margin-top:4px ;
+}
+.Education .title4{
+    text-transform: uppercase;
+    color:  #03a9f4 ;
+    margin-top: 50px;
+}
+.col-3 h3{
+    margin-top: 30px;
+}
+.projects .title5{
+    margin-top: 30px;
+}
+.projects .title5{
+    text-transform: uppercase;
+    margin-top: 50px;
+    color: #03a9f4 ;
+}
+.projects .col-1 h4{
+    margin-top: 20px;
+}
+.projects .col-1{
+    margin-bottom: 30px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="left_side">
+          <div class="profileText">
+            <div class="imgBx">
+                <img src="https://images5.alphacoders.com/642/642891.jpg" height="180px" width="180px">
+            </div>
+            <h2>SAnjay Khan <br><span>Front End Developer</span></h2>
+          </div>
+          <div class="contactInfo">
+            <h3 class="title">Contact Info</h3>
+            <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">+91 9360462663</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <span class="text">kasanjaykhan@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text">632-603,paradarami village,Vellore,india</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>
+                    <span class="text">sanjaykhanportfolio.netlify.app/</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                    <span class="text">github.com/sanjaykhan97</span>
+                </li>
+            </ul>
+          </div>
+         <div class="about intrest">
+            <h2 class="title2">intrest</h2>
+            <ul>
+                <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Drawing</li>
+                <li><i class="fa fa-headphones" aria-hidden="true"></i>Music</li>
+                <li><i class="fa fa-arrows-alt" aria-hidden="true"></i>Carrom</li>
+            </ul>
+         </div>
+         <div class="contactInfo languag">
+            <h3 class="title">Languages</h3>
+            <ul>
+                <li>
+                    <span class="text">Tmail</span>
+                    <span class="percent">
+                    <div style="width:100% ;"></div>
+                    </span>
+                    
+                </li>
+                <li>
+                    <span class="text">English</span>
+                    <span class="percent">
+                    <div style="width:60% ;"></div>
+                    </span>
+                    
+                </li>
+                <li>
+                    <span class="text">Telugu</span>
+                    <span class="percent">
+                    <div style="width:100% ;"></div>
+                    </span>
+                   
+                </li>
+        </div>
+        <br><br><br><br><b></b><br><br><br><br><b></b><br><br><br><br><b></b>
+        
+        </div>
+        <div class="right_side">
+            
+            <div class="about">
+                <h2 class="title3">Profile</h2>
+                <h3>Front End Developer</h3>
+                <p>passion web developer looking forward to leveraging my unwavering dedication and where i can utilize and apply my Knowledge, skills which would enable me as a fresh graduate to griw while fulfilling organizational goals</p>
+            </div>
+
+            <div class="Education">
+                <h2 class="title4">Education</h2>
+                <hr><br>
+                 <h3>Degree</h3>
+                 <p>vignanasudha institute of management and technology,Chittore,<br>Andhra Pradesh</p>
+                 <h4 style="margin-top:10px ;">06/2018 -10/2021</h4>
+                 <h3 style="margin-top: 15px;">Courses</h3>
+                 <h4 style="margin-top: 7px;">Bsc Maths, Electronics and Computer <br> Science(MECS)</h4>
+                <div class="col-3">
+                    <h3>Intermediate</h3>
+                    <p>Government Boys Higher Secondary School</p>
+                    <h4 style="margin-top:10px ;">2018</h4>
+                    <h3 style="margin-top: 15px;">Courses</h3>
+                    <h4 style="margin-top: 7px;">Maths & Biology</h4>
+
+                </div>
+                <div class="col-3">
+                    <h3>Secondary Education</h3>
+                    <p>Government Boys Higher Secondary School</p>
+                    <h4 style="margin-top:10px ;">2016</h4>
+                </div>
+            </div>
+            <div class="projects">
+                <h2 class="title5">Personal Projects</h2>
+                <hr>
+                <div class="col-1">
+                    <h4>Ecomerce Website</h4>
+                    <p>E-comerce (electronic commerce) is the bying of prodects, <br> Where user can login and register to the application and buy prodects using paypal and Stripe account</p>
+                </div>
+                <div class="col-1">
+                    <h4>Food Restorant Website</h4>
+                    <p>This is a Food Website and it having some Feutures like user <br> available can see some diffrent food items and it will show like each items deatails also and buying options </p>
+                </div>
+                <div class="col-1">
+                    <h4>Online Book Store Website</h4>
+                    <p>this is Book Store WEbsite the user can add the number of Book <br> deatails and you can see the deatails Stored in the list form.the user can delete the list items</p>
+
+                </div>
+
+            </div>
+            <div class="contactInfo languag">
+                <h3 class="title" style="color: #03a9f4;font-size: 30px;font-weight: 700;">Skills</h3>
+                <ul>
+                    <li>
+                        <span class="text" style="color:black ;">HTML</span>
+                        <span class="percent">
+                        <div style="width:90% ;"></div>
+                        </span>
+                        
+                    </li>
+                    <li>
+                        <span class="text"style="color:black ;">CSS</span>
+                        <span class="percent">
+                        <div style="width:60% ;"></div>
+                        </span>
+                        
+                    </li>
+                    <li>
+                        <span class="text"style="color:black ;">JAVASCRIPT</span>
+                        <span class="percent">
+                        <div style="width:60%;"></div>
+                        </span>
+                       
+                    </li>
+                    <li>
+                        <span class="text"style="color:black ;">REACT JS</span>
+                        <span class="percent">
+                        <div style="width:60% ;"></div>
+                        </span>
+                       
+                    </li>
+            </div>
+        </div>
+        </div>
+
+</body>
+</html>

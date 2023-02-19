@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web disign easy tutorials</title>
+    <link rel="stylesheet" class="style.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    nav .logo{
+        width: 150px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        text-align: right;
+        margin-right:700px;
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px;
+    }
+    nav ul li a{
+      text-decoration: none; 
+      color: black;
+      font-weight: 700px;
+      position: relative;
+      padding: 10px; 
+    }
+    nav ul li a::before{
+        content: "";
+        width: 100%;
+        background: #d9f688;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: -5px;
+        border-radius: 20px;
+        transition: height 0.5s;
+    }
+    nav ul li a:hover::before{
+        height: 85px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis:50%;
+        position: relative;
+    }
+    
+    .feuter-img{
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 30px;
+        
+    }
+    .thambnail-img{
+        width: 300px;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        border-radius: 20px;
+        box-shadow: 5px;
+        margin-top: 20px;
+
+    }
+    h1{
+        font-size: 40px;
+        margin-bottom: 30px;
+        padding: 30px;
+    
+    }
+    .col button{
+        padding: 10px;
+        background-color: yellow;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+    .col button:hover{
+        background: palevioletred;
+    }
+    .box{
+        margin-top: 80px;
+        width: 100px;
+        
+        display: flex;
+        
+    }
+    .col-3{
+        padding: 30px;
+        width: 300px;
+        border-radius: 10px;
+        
+    }
+    .col-3 img{
+        width: 250px;
+        display: inline-block;
+
+    }
+    .food-img{
+        padding: 10px;
+        width: 100px;
+        margin: left 0;
+        border-radius: 20px;
+    }
+    .super-img{
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .nice-img{
+        padding: 10px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+    .food-img h3{
+        text-align: center;
+        padding: 10px;
+    }
+    .super-img h3{
+        text-align: center;
+        padding: 10px;
+    }
+    .nice-img h3{
+        text-align: center;
+        padding: 10px;
+    
+    }
+    .col-3 button{
+        background: yellow;
+        border-radius: 30px;
+        width: 100px;
+        height: 50px;
+        transition: 0.5s;
+    }
+    .col-3 button:hover{
+        background: slategray;
+    }
+    .types{
+        margin-top: 80px;
+        width: 100px;
+        
+        display: flex;
+}
+.line-2{
+        padding: 50px;
+        width: 300px;
+        border-radius: 10px;
+        
+    }
+    .container{
+        margin-top: 80px;
+        width: 100%;
+    }
+    .lines{
+        margin: 50px;
+        display: flex;
+    }
+    .lines-1 img{
+        width: 250px;
+        border-radius: 30px;
+        margin: 50px;
+        margin-left: 0;
+    }
+    .lines-1 button{
+        background:yellow;
+        border-radius: 30px;
+        width: 100px;
+        height: 50px;
+        transition: 0.5s;
+    }
+    .lines-1 button:hover{
+        background-color: darkslateblue;
+    }
+
+
+
+</style>
+<body>
+    
+
+    <div class="hero">
+        <nav>
+            <img src="https://i.pinimg.com/474x/05/64/db/0564db618b8e778534e882cfda48dd2f.jpg" class="logo">
+            <ul>
+                <li><a href="#">contect</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipe</a></li>
+                <li><a href="#">Blog</a></li>
+            <ul> 
+        </nav>
+        <div class="row">
+            <div class="col">
+                <h1><span> Best Fast Food And Yammi <br> <br> Soft Burger</span></h1>
+                <button type="button" class="btn">Explore</button>
+            
+
+            </div>
+            <div class="col">
+                <img src="https://media.istockphoto.com/photos/cheeseburger-with-cola-and-french-fries-picture-id1154731746?k=20&m=1154731746&s=612x612&w=0&h=joDhpgUgTjtiYoPZtPH11PSjpyfAFPxZisz1ssj3YJ4=" class="feuter-img">
+
+
+
+            </div>
+            <br><br>
+            
+            <div class="box">
+                <div class="col-3">
+                <img src="https://image.shutterstock.com/image-photo/closeup-home-made-burgers-on-260nw-172259846.jpg" class="food-img">
+                <h3>yammi burger</h3>
+                <br>
+                <p>kcf Burger its so mush of spaicy and <br> yammy burger</p>
+                <br>
+                <br>
+                <button type="button" class="btn"> order now</button>
+                </div>
+                <div class="col-3">
+                    <img src="https://static3.depositphotos.com/1006838/218/i/600/depositphotos_2186262-stock-photo-fast-food-collection.jpg" class="super-img">
+                    <h3>yammi burger</h3>
+                    <br>
+                    <p>kcf Burger its so mush of spaicy  <br> yammy burger</p>
+                    <br>
+                    <br>
+                    <button type="button" class="btn">order now</button>
+
+                </div>
+                <div class="col-3">
+                    <img src="https://images.pexels.com/photos/750073/pexels-photo-750073.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="nice-img">
+                    <h3>yammi burger</h3>
+                    <br>
+                    <br>
+                    <p>kcf Burger its so mush of spaicy and <br>
+                         yammy burger</p>
+                         <br>
+                         <br>
+                         <button type="button" class="btn"> order now</button>
+
+                </div>
+                
+
+    </div>
+    <br><br><br><br><br><br><br>
+
+
+     <div class="container">
+        <div class="lines">
+            <div class="lines-1">
+                <img src="https://c4.wallpaperflare.com/wallpaper/946/274/339/food-burgers-fast-food-fries-wallpaper-preview.jpg" class="special img">
+                <br>
+                <h3>Superb Fast Food</h3>
+                <br>
+                <p>this is superb <br> spaicy food</p>
+                <br>
+                <br>
+                <button type="button" class="btn" >Order Now</button>
+
+            </div>
+            <div class="lines-1">
+                <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" class="good-img">
+                <br>
+                <h3>Superb Fast food</h3>
+                <br>
+                <p>this is superb <br> spaicy food</p>
+                <br>
+                <br>
+                <button type="button" class="btn"> Order Now</button>
+
+            </div>
+            <div class="lines-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn6TlU2loAPWTTdFMIZsJgrYaiAqoFdH88pi64cnbFXFQ3EBHgP0co1w3AawP8yZZ4ZTw&usqp=CAU" class="very-img">
+                <br>
+                <h3>Superb Fast food</h3>
+                <br>
+                <p>this is superb <br> spaicy food</p>
+                <br>
+                <br>
+                <button type="button" class="btn">Order Now</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

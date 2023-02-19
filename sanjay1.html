@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">fname</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="lname">lname</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="email">email</label>
+        <input type="text" name="" id="email"><br>
+        <label for="pasword">pasword</label>
+        <input type="text" name="" id="pasword"><br>
+        <label for="dateofbrith">date of brith</label>
+        <input type="text" name="" id="dateofbrith"><br>
+        <button onclick="adduser()" type="button" id="addBtn">adduser</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>email</th>
+                <th>pasword</th>
+                <th>date of broth</th>
+                <th>edit</th>
+                <th>delete</th>
+                
+            </tr>
+        </thead>
+        <tbody></tbody>
+
+    </table>
+
+    <script>
+         var allusers=[]
+        function adduser(){
+            var user={
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+                email:document.getElementById("email").value,
+                pasword:document.getElementById("pasword").value,
+                dateofbrith:document.getElementById("dateofbrith").value,
+
+            }
+            console.log ("user",user)
+            clerform()
+            allusers.push(user)
+            displayusers(allusers)
+        }
+        function clerform(){
+            document.getElementById("fname").value=""
+            document.getElementById("lname").value=""
+            document.getElementById("email").value=""
+            document.getElementById("pasword").value=""
+            document.getElementById("dateofbrith").value=""
+
+        }
+        function displayusers(users){
+            document.querySelector("tbody").innerHTML=""
+            users.forEach((user,i) => {
+                var mytr=document.createElement("tr")
+                var ftd=document.createElement("td")
+                ftd.innerHTML=user.fname;
+
+                var ltd=document.createElement("td")
+                ltd.innerHTML=user.lname;
+
+                var etd=document.createElement("td")
+                etd.innerHTML=user.email;
+
+                var ptd=document.createElement("td")
+                ptd.innerHTML=user.pasword;
+
+                var dtd=document.createElement("td")
+                dtd.innerHTML=user.dateofbrith;
+
+                mytr.appendChild(ftd)
+                mytr.appendChild(ltd)
+                mytr.appendChild(etd)
+                mytr.appendChild(ptd)
+                mytr.appendChild(dtd)
+
+                 var editTd=document.createElement("td")
+                 var editBtn=document.createElement("button")
+                 editBtn.innerHTML="edit"
+                 editBtn.setAttribute("onclick","edituser("+i+")")
+                 editTd.appendChild(editBtn)
+
+                 var deleteTd=document.createElement("td")
+                 var deleteBtn=document.createElement("button")
+                 deleteBtn.innerHTML="delete"
+                 deleteBtn.setAttribute("onclick","deleteuser("+i+")")
+                 deleteTd.appendChild(deleteBtn)
+
+                 mytr.appendChild(editTd)
+                 mytr.appendChild(deleteTd)
+
+                document.querySelector("tbody").appendChild(mytr)
+                
+            });
+
+        }
+        function deleteuser(i){
+            allusers=allusers.filter(function(user,index){
+                return i !==index
+            });
+            console.log(allusers)
+            displayusers(allusers)
+                
+        }
+        function edituser(i){
+            console.log(i)
+            document.getElementById("fname").value=allusers[i].fname
+            document.getElementById("lname").value=allusers[i].lname
+            document.getElementById("email").value=allusers[i].email
+            document.getElementById("pasword").value=allusers[i].pasword
+            document.getElementById("dateofbrith").value=allusers[i].dateofbrith
+
+        }
+        displayusers(allusers)
+    </script>
+    
+</body>
+</html>

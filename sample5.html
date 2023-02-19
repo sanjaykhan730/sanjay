@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: slateblue;
+        color: wheat;
+
+        
+        }
+        .box{
+            width: 300px;
+            padding: 60px;
+            background:black;
+            border-radius: 80px;
+            height: 700px;
+            position:absolute;
+            text-align: center;
+            transform: translate(-50,-50);
+            left: 30%;
+        }
+        .box h1{
+            font-weight: 500px;
+            text-transform: uppercase;
+        }
+        .box input[type="text"],.box input[type="pasword"]{
+            font-size: 1em;
+            background: none;
+            margin: 10px;
+            border: 2px solid blueviolet;
+            padding: 5px;
+            width: 200px;
+            outline: none;
+            color: wheat;
+            border-radius: 15px;
+            }
+            .box input[type="text"]:focus,.box input[type="pasword"]:focus{
+               width: 280px; 
+            }
+            .box input[type="submit"]{
+            font-size: 1em;
+            color: white;
+            margin: 10px;
+            border: 2px solid blueviolet;
+            padding: 5px;
+            width: 200px;
+            outline: none;
+            border-radius: 15px;
+            background-color: black;
+            }
+             .box input[type="submit"]:focus{
+                width: 280px;
+             }
+             .box input[type="submit"]:hover{
+                background-color: green;
+                color: wheat;
+             } 
+</style>
+<body>
+
+<div>
+    <form class="box">
+        <h1>register</h1>
+
+ enter your first name:
+    <input type="text" id="firstname" onclick="placeholder()">
+    <br>
+     enter your last name:
+    <input type="text" id="lastname" onclick="placeholder()">
+    <br>
+     enter your email id:
+    <input type="text" id="emailid" onclick="placeholder()">
+    <br>
+    enter your pasword:
+    <input type="text" id="pasword" onclick="placeholder()">
+    <br>
+    enter your conform pasword:
+    <input type="text" id="conformpasword" onclick="placeholer()">
+    <br>
+    <br>
+    enter your correct age:
+    <input type="text" id="age" onclick="placeholder()">
+    <br>
+    <br>
+    enter your date of birth:
+    <input type="text" id="date of birth" onclick="placeholder()">
+    <br>
+    <br>
+    <input type="radio" onchange="placeholder()"/>male 
+    <br>
+    <br>
+    <input type="radio" onchange="helloChange()"/>female 
+    <br>
+    <br>
+    <input type="submit" name="" value="register">
+        
+        </form></div>
+</body>
+</html>

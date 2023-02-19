@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .player {
+            width: 200px;
+            border:1px solid red;
+            padding: 5px;
+            height: 250px;
+            display: inline-block;
+        }
+        img{
+            width: 100%;
+            height: 120px;
+        }
+        p{
+            text-align: center;
+        }
+        button{
+            background: rgb(50, 207, 50);
+            color: white;
+            font-size: 18px;
+            border: 2px solid;
+            height: 70px;
+            width: 160px;
+            margin-top: 50px;
+            margin-left: 40px;
+            border-radius: 5px;
+            font-weight: 800;
+        }
+    </style>
+    <body>
+        <button onclick="displayplayers()">Show players </button>
+        <hr>
+    <script>
+        var teamindia = [
+        {
+         playername:"virat",
+         score:55,
+         pic: "https://static.indiatvnews.com/ins-web/images/kohli-profile-1540274232.jpg", 
+         }, 
+         {
+            playername:"dhoni",
+            score:100,
+            pic:"https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg",
+         },
+         {
+            playername:"rohit",
+            score:50,
+            pic:"http://www.crictotal.com/player-images/15.jpg",
+         },
+         {
+            playername:"pandia",
+            score:60,
+            pic:"https://i0.wp.com/cricketaddictor.com/wp-content/uploads/2022/03/Hardik-Pandya-.png?fit=1200%2C685&ssl=1",
+         }, 
+        ];
+
+        function displayplayers(){
+            teamindia.forEach(function (player) {
+                var mydiv =document.createElement("div")
+                mydiv.setAttribute("class","player")
+                document.body.appendChild(mydiv);
+
+                var myimg =document.createElement("img");
+                myimg.setAttribute("src",player.pic)
+                mydiv.appendChild(myimg)
+
+                var myPara1 = document.createElement("p")
+                myPara1.innerHTML = "player name : "+player.playername
+                mydiv.appendChild(myPara1)
+
+                var myPara2 = document.createElement("p")
+                myPara2.innerHTML = "score : "+player.score
+
+                mydiv.appendChild(myPara2)
+                
+            });
+        }
+
+    </script>
+</body>
+
+</html>

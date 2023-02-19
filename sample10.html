@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .food{
+        width: 400px;
+        border:1px solid red;
+        padding:5px;
+        height:250px;
+        display: inline-block;
+        margin:50px ;
+      }
+      img{
+        width: 100%;
+        height:150px;
+
+      }
+      p{
+        text-align: center;
+      }
+      button{
+        border: 2px solid;
+        background: rgb(54, 219, 54);
+        font-size: 16px;
+        font-weight: 700;
+        height: 50px;
+        width:120px ;
+        color: wheat;
+        border-radius: 5px;
+        margin-top: 30px;
+        justify-content: center;
+        margin-left: 400px;
+      }
+    
+
+    </style>
+</head>
+<body>
+  <section>
+    <div class="container" >
+      <h1 class="brand"> Racipe app</h1>
+      <form>
+        <input type="text" placeholder="search your Recipr">
+
+      </form>
+    </div>
+  </section>
+  <br><br>
+  <button onclick="displayfood()"> display food</button><br><br>
+  <button onclick="pricehere()"> price here</button><br><br>
+  
+    <script>
+        var foodmenu =[
+          {
+            foodname:"pizza",
+            price:200,
+            pic:"https://thumbs.dreamstime.com/b/pizza-rustic-italian-mozzarella-cheese-basil-leaves-35669930.jpg",
+          },
+          {
+            foodname:"mutton beriyani",
+            price:250,
+            pic:"https://media.istockphoto.com/photos/gosht-or-lamb-biryani-prepared-in-basmati-rice-served-with-yogurt-dip-picture-id980036908?k=20&m=980036908&s=612x612&w=0&h=jJxdutGu4Dz8nliPJlUQ-MYVsWvmJln9rZWyuoqs3jU=",
+          },
+          {
+            foodname:"checken beriyani",
+            price:180,
+            pic:"https://media.istockphoto.com/photos/chicken-biryani-directly-above-photo-picture-id1169141170?k=20&m=1169141170&s=612x612&w=0&h=EpCF3lQF2GBRaVApNELuE5xFQfv8fyQ_wWC52hmyxeo=",
+          },
+          {
+            foodname:"egg beriyani",
+            price:100,
+            pic:"https://www.indianhealthyrecipes.com/wp-content/uploads/2020/02/instant-pot-egg-biryani.jpg",
+          },  
+        ];
+
+        function displayfood(){
+          
+          foodmenu.forEach(function(food){
+            var mydiv = document.createElement("div");
+            mydiv. setAttribute("class","food")
+            document.body.appendChild(mydiv);
+
+            var myimg = document.createElement("img");
+            myimg. setAttribute("src",food.pic)
+            mydiv.appendChild(myimg)
+
+            
+            var myPara1 = document.createElement("p")
+            myPara1.innerHTML = "food name : "+food.foodname
+            mydiv.appendChild(myPara1)
+
+            var myPara2 = document.createElement("p");
+            myPara2.innerHTML = "price : "+ food.price
+
+            mydiv.appendChild(myPara2)
+            
+            });
+            }
+    </script>
+    
+    
+</body>
+</html>

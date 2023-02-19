@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi All Prodects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://wallpaper.dog/large/10772971.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://i.pinimg.com/originals/66/5d/23/665d23d00824f71c7cbd556aad24877d.png" width="100px">
+    
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Prodects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contect</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </nav>
+            <span class="icon">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <ion-icon name="menu-outline" class="menu-icon" onclick="menutoggle()"></ion-icon>
+                
+            </span>
+            
+            </div>
+    </div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<!------single prodects page------->
+
+<div class="small-container">
+    <div class="row">
+        <div class="col-2"> 
+            <img src="https://m.media-amazon.com/images/I/61hX7+HQW9L._SX522_.jpg" id="prodectimg" width="400px" height="400px" >
+            <div class="small-img-row">
+
+                <div class="small-img-col">
+                    <img src="https://m.media-amazon.com/images/I/61hX7+HQW9L._SX522_.jpg" class="small-img" width="90px">
+
+                </div>
+                <div class="small-img-col">
+                    <img src="https://m.media-amazon.com/images/I/511z9O1xweL._SL1403_.jpg" class="small-img" width="80px">
+
+                </div>
+                <div class="small-img-col">
+                    <img src="https://www.mugart.pk/wp-content/uploads/2016/04/SC-107-B2.png" class="small-img" width="90px">
+
+                </div>
+                <div class="small-img-col">
+                    <img src="https://m.media-amazon.com/images/I/71UtcSHHEcL._SX425_.jpg" class="small-img" width="90px">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <span> Home/Mug</span><br>
+            <h2>Messi Tea Mug</h2><br>
+            <h4>$50.00</h4>
+            <br><br>
+            <h3>Qty:</h3>
+            <input type="number" value="1">
+            <a href="" class="Btn">Add To Card</a>
+            <h3>Prodect Deatails</h3><br>
+            <p>Messi Picture Printed Primimum Tea Mug. It Suitable Gift on any occasion to your loved once.Superior Quality, unique & trendy Design mugs available at your doorstep.its a Perfect Brithday Gift</p>
+        </div>
+    </div>
+
+</div>
+<!------feature categories----->
+<div class="small-container">
+   
+</div>
+     <!--footer-->
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download Our App For Android and ios Mobaile Phone.</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="https://logos.textgiraffe.com/logos/logo-name/Messi-designstyle-cartoon-m.png" width="80px" height="80px">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and 
+                    </p>
+                    
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Copons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022-Easy Tutorials</p>
+        </div>
+     </div>
+     <!---js for toggle menu-->
+     <script>
+        var menuitems = document.getElementById("menuitems");
+
+        menuitems.style.maxHeight = "0px";
+
+        function menutoggle(){
+           if(menuitems.style.maxHeight == "0px")
+           {
+            menuitems.style.maxHeight = "200px";
+           }
+           else{
+            menuitems.style.maxHeight = "0px";
+           }
+        }
+
+     </script> 
+     <!----js for prodect gallery----->
+     <script>
+        var prodectimg = document.getElementById("prodectimg")
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function()
+        {
+            prodectimg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function()
+        {
+            prodectimg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function()
+        {
+            prodectimg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function()
+        {
+            prodectimg.src = smallimg[3].src;
+        }
+        
+
+
+    
+     </script>
+</body>
+</html>

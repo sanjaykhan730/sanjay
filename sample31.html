@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="username">user name</label>
+        <input type="text" name="" id="username"><br><br>
+        <label for="email">email</label>
+        <input type="text" name="" id="email"><br><br>
+        <label for="pasword">pasword</label>
+        <input type="text" name="" id="pasword"><br><br>
+        <label for="contect">contect</label>
+        <input type="text" name="" id="contect"><br><br>
+        <button onclick="creatusers()" type="button">creat users</button>
+      </form>
+      <hr>
+      <table  border="1">
+      <thead>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>pasword</th>
+            <th>contect</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      </table>
+        <script>
+            var allusers=[]
+            function creatusers(){
+                var users={
+                    username:document.getElementById("username").value,
+                    email:document.getElementById("email").value,
+                    pasword:document.getElementById("pasword").value,
+                    contect:document.getElementById("contect").value,
+                    
+                }
+                console.log("users",users)
+                clearform()
+                allusers.push(users)
+                displayusers(allusers)
+            }
+            function clearform(){
+                    document.getElementById("username").value=""
+                    document.getElementById("email").value=""
+                    document.getElementById("pasword").value=""
+                    document.getElementById("contect").value=""
+
+            }
+            function displayusers(users){
+                document.querySelector("tbody").innerHTML=""
+                users.forEach((user,i) => {
+                    var mytr=document.createElement("tr")
+                    var usernameTd=document.createElement("td")
+                    usernameTd.innerHTML=user.username;
+
+                    var emailTd=document.createElement("td")
+                    emailTd.innerHTML=user.email;
+
+                    var paswordTd=document.createElement("td")
+                    paswordTd.innerHTML=user.pasword;
+
+                    var contectTd=document.createElement("td")
+                    contectTd.innerHTML=user.contect;
+                    mytr.appendChild(usernameTd);
+                    mytr.appendChild(emailTd);
+                    mytr.appendChild(paswordTd);
+                    mytr.appendChild(contectTd);
+
+                    var editTd=document.createElement("td") 
+                    var editBtn=document.createElement("button")
+                    editBtn.innerHTML="edit"
+                    editTd.appendChild(editBtn)
+
+                    var deleteTd=document.createElement("td")
+                    var deleteBtn=document.createElement("button")
+                    deleteBtn.innerHTML="delete"
+                    deleteBtn.setAttribute("onclick","deleteuser("+i+")")
+                    deleteTd.appendChild(deleteBtn)
+                    
+                    mytr.appendChild(editTd)
+                    mytr.appendChild(deleteTd)
+
+                    document.querySelector("tbody").appendChild(mytr)
+
+                });
+            }
+            function deleteuser(i){
+                allusers=allusers.filter(function(user,index){
+                    return i !==index
+                    
+                });
+                console.log(allusers)
+                displayusers(allusers)
+            }
+            
+        </script>
+
+</body>
+</html>

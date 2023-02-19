@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label for="name">name:</label><br><br>
+    <input type="text" name="" id="name"><br><br>
+    <label for="email">email:</label><br><br>
+    <input type="text" name="" id="email"><br><br>
+    <label for="veillage">veillage:</label><br><br>
+    <input type="text"  name="" id="veillage"><br><br>
+    <label for="pasword">pasword:</label><br><br>
+    <input type="text" name="" id="pasword"><br><br>
+    <button type="button" onclick="adduser()"> add user</button>
+    
+</form>
+    <script>
+        function adduser(){
+            var user={
+                name:document.getElementById("name").value,
+                email:document.getElementById("email").value,
+                veillage:document.getElementById("veillage").value,
+                pasword:document.getElementById("pasword").value,
+            
+            }
+            console.log(user)
+        }
+        var person=["sanjay","tamil","ajith","settu"]
+
+        person.forEach(function(user) {
+            var myli=document.createElement("li")
+
+            myli.innerHTML=user
+            document.querySelector("ol").appendChild(li)
+            
+        });
+
+
+
+    </script>
+    
+</body>
+</html>
